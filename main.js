@@ -59,14 +59,13 @@ class Ball {
       this.gravitySpeed = -(this.gravitySpeed * this.bounceY);
     }
 
-    if (this.x > canvas.width - this.radius || this.x < 0 + this.radius) {
+    if (this.x >= canvas.width - this.radius || this.x <= 0 + this.radius) {
       this.dx = -this.dx;
     }
-    console.log(this.gravitySpeed);
   }
 }
 
-for (let i = 0; i < 1; i++) {
+for (let i = 0; i < 50; i++) {
   ballsArray.push(
     new Ball(Math.random() * canvas.width, Math.random() * canvas.height, 10)
   );
